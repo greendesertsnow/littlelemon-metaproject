@@ -41,11 +41,11 @@ export function Booking() {
 		console.log(submited);
 	}, [submited]);
 
-	function initializeTimes(date: Date) {
+	function initializeTimes(date) {
 		return fetchAPI(date);
 	}
 
-	function updateTimes(date: string | number | Date) {
+	function updateTimes(date) {
 		const dateObj = new Date(date);
 		return fetchAPI(dateObj);
 	}
@@ -101,8 +101,8 @@ export function Booking() {
 			) : (
 				<Card classNames={{ base: "bg-emerald-900 outline w-full " }}>
 					<CardHeader>Reserve A Table</CardHeader>
-					<CardBody className="gap-4 flex flex-col justify-center">
-						<div className="grid sm:grid-flow-col sm:grid-cols-2 gap-4">
+					<CardBody className="gap-4 flex flex-col  justify-center">
+						<div className="flex flex-col sm:flex-row gap-4">
 							<DatePicker
 								date={date}
 								setDate={setDate}
@@ -115,7 +115,7 @@ export function Booking() {
 								setTime={setTime}
 							/>
 						</div>
-						<div className="grid grid-flow-col grid-cols-2 gap-4">
+						<div className="gap-4">
 							<GuestCount
 								guests={guests}
 								setGuests={setGuests}
@@ -127,7 +127,7 @@ export function Booking() {
 								aria-label="Occasion Picker"
 							/>
 						</div>
-						<div className="grid grid-flow-col grid-cols-2 gap-4">
+						<div className="flex flex-col sm:flex-row  gap-4">
 							<Input
 								className="h-16"
 								size="lg"

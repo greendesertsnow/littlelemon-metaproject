@@ -29,7 +29,7 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"lib/bookingAPI.js",
-		"components/booking.tsx"
+		"components/booking.jsx"
 	],
 	"exclude": ["node_modules"]
 }
