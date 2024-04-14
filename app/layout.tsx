@@ -17,9 +17,9 @@ export default function RootLayout({
 			<body>
 				<Provider attribute="class" defaultTheme="system" enableSystem>
 					<main className="little-lemon text-foreground ">
-						<Navigation menuItems={menuItems} />
+						<Navigation />
 						{children}
-						<Footer menuItems={menuItems} />
+						<Footer />
 					</main>
 				</Provider>
 			</body>
